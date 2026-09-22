@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Travel Journal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .signup-page {
+        min-height: 100vh;
+        display: flex;
+        position: relative;
+        background-image: url("/login-img.png");
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+      }
+      .signup-page::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 70, 55, 0.55);
+        z-index: 0;
+      }
+
+      .signup-image {
+        width: 50%;
+        min-height: 100vh;
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+      }
+
+      .signup-image-overlay {
+        position: relative;
+        width: 100%;
+        padding: 0 55px;
+        z-index: 2;
+        color: white;
+      }
+
+      .signup-image-label {
+        display: inline-block;
+        color: #ffff;
+        font-size: 0.75rem;
+        font-weight: bolder;
+        letter-spacing: 1.5px;
+        margin-bottom: 50px;
+      }
+
+      .signup-image-overlay h2 {
+        max-width: 520px;
+        margin-bottom: 20px;
+        font-family: "Kaushan Script", sans-serif;
+        font-size: 2.8rem;
+        font-weight: bold;
+        line-height: 1.15;
+        color: #ffffff;
+      }
+
+      .signup-image-overlay p {
+        max-width: 500px;
+        margin: 0;
+        color: #e3ebe5;
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      .signup-copyright {
+        position: absolute;
+        left: 55px;
+        bottom: 35px;
+        color: #dce9df;
+        font-size: 0.75rem;
+      }
+
+      .signup-form-section {
+        width: 50%;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .signup-form-container {
+        width: 78%;
+        max-width: 560px;
+        padding: 40px 50px;
+        background: rgba(255, 255, 255, 0.2);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        border-radius: 28px;
+        box-shadow:
+          0 20px 50px rgba(35, 55, 42, 0.12),
+          inset 0 1px 0 rgba(255, 255, 255, 0.45);
+      }
+
+      .signup-brand {
+        color: #264b38;
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+      }
+
+      .signup-form-container h1 {
+        font-family: "Kaushan Script", sans-serif;
+        font-size: 2.8rem;
+        font-weight: bold;
+        color: #161515;
+        margin-bottom: 10px;
+      }
+
+      .signup-description {
+        color: #dce9df;
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 30px;
+      }
+
+      .signup-form-container label {
+        display: block;
+        color: #070707;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+
+      .signup-form-container .form-control {
+        height: 48px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        background-color: rgba(255, 255, 255, 0.9);
+        padding: 0 15px;
+        color: #35433a;
+      }
+
+      .signup-form-container .form-control::placeholder {
+        color: #9aa59e;
+      }
+
+      .signup-form-container .form-control:focus {
+        border-color: #ffffff;
+        background-color: #ffffff;
+        box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+      }
+
+      .signup-submit {
+        display: block;
+        margin: 10px auto 0;
+
+        width: 180px;
+        height: 50px;
+
+        border: none;
+        border-radius: 10px;
+
+        background-color: #005a2a;
+        color: white;
+
+        font-size: 0.95rem;
+        font-weight: 600;
+
+        transition:
+          background-color 0.2s ease,
+          transform 0.2s ease;
+      }
+
+      .signup-submit:hover {
+        background-color: #264b38;
+        transform: translateY(-1px);
+      }
+
+      .login-redirect-link {
+        margin-top: 20px;
+        text-align: center;
+        color: #dce9df;
+        font-size: 0.9rem;
+      }
+
+      .login-redirect-link a {
+        color: #ffffff;
+        font-weight: 600;
+        text-decoration: underline;
+      }
+      .login-redirect-link a:hover {
+        color: #003e00;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="signup-page">
+      <div class="signup-image">
+        <div class="signup-image-overlay">
+          <span class="signup-image-label">✦ START YOUR ADVENTURE</span>
+
+          <h2>Memories that last a lifetime.</h2>
+
+          <p>
+            Create an account to begin documenting your journeys, mapping out
+            your favorite destinations, and preserving every special moment.
+          </p>
+        </div>
+        <div class="signup-copyright">
+          © 2026 My Travel Journal. Explore the world.
+        </div>
+      </div>
+
+      <!-- Right Side Glassmorphism Form Container -->
+      <div class="signup-form-section">
+        <div class="signup-form-container">
+          <div class="signup-brand">✦ My Travel Journal</div>
+
+          <h1>Create Account.</h1>
+
+          <p class="signup-description">
+            Sign up to start saving your lifetime memories and adventures.
+          </p>
+
+          <form>
+            <div class="form-group mb-3">
+              <label for="name">First Name</label>
+              <input
+                class="form-control"
+                id="name"
+                type="text"
+                name="name"
+                placeholder="Enter your Name..."
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="email">Email Address</label>
+              <input
+                class="form-control"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="name@example.com"
+              />
+            </div>
+
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input
+                class="form-control"
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+            </div>
+
+            <button id="smt" class="signup-submit" type="submit">
+              Sign Up →
+            </button>
+          </form>
+
+          <p class="login-redirect-link">
+            Already have an account?
+            <a href="/login">Log In</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      async function postData(url = "", data = {}) {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+        return response.json();
+      }
+
+      let a = document.getElementById("smt");
+      a.addEventListener("click", async (event) => {
+        event.preventDefault();
+        let Fname = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        let res = await postData("/signup", { Fname, email, password });
+
+        if (res.success) {
+          alert("Sign up successful!..You can now log in..");
+          document.getElementById("name").value = "";
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          window.location.href = "/login";
+        }
+        else {
+            alert(res.message);
+        }
+      });
+    </script>
+  </body>
+</html>

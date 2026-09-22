@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Travel Journal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+  href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+  rel="stylesheet"
+/>
+    <style>
+      .login-page {
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+
+  background-image: url("/login-img.png");
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+.login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 70, 55, 0.55);
+  z-index: 0;
+}
+
+.login-image {
+  width: 50%;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center; 
+
+}
+.login-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  
+}
+
+.login-image-overlay {
+  position: relative; 
+  width: 100%;        
+  padding: 0 55px;    
+  z-index: 2;
+  color: white;
+}
+
+.login-image-label {
+  display: inline-block;
+  color: #ffff;
+  font-size: 0.75rem;
+  font-weight:bolder;
+  letter-spacing: 1.5px;
+  margin-bottom: 50px;
+}
+
+.login-image-overlay h2 {
+  max-width: 520px;
+  margin-bottom: 20px;
+  font-family: "Kaushan Script", sans-serif;
+  font-size: 2.8rem;
+  line-height: 1.15;
+  color:  #ffff;
+}
+
+.login-image-overlay p {
+  max-width: 500px;
+  margin: 0;
+  color: #e3ebe5;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+.login-copyright {
+  position: absolute;
+  left: 55px;
+  bottom: 35px;
+  color: #dce9df;
+  font-size: 0.75rem;
+}
+
+.login-form-section {
+  width: 50%;
+  min-height: 100vh;
+ 
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-form-container {
+  width: 78%;
+  max-width: 560px;
+  padding: 45px 50px;
+
+  background: rgba(255, 255, 255, 0.20);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 28px;
+
+  box-shadow:
+    0 20px 50px rgba(35, 55, 42, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
+}
+.login-brand {
+  color: #264b38;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 45px;
+}
+
+.login-form-container h1 {
+  font-family: "Kaushan Script", sans-serif;
+  font-size: 2.8rem;
+  color: #26352c;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.login-description {
+  color: #e3ebe5;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 42px;
+}
+.login-form-container label {
+  display: block;
+  color: #050606;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.login-form-container .form-control {
+  height: 50px;
+  border: 1px solid #d9e1da;
+  border-radius: 10px;
+  background-color: #ffffff;
+  padding: 0 15px;
+  color: #35433a;
+}
+
+.login-form-container .form-control::placeholder {
+  color: #9aa59e;
+}
+
+.login-form-container .form-control:focus {
+  border-color: #315c45;
+  box-shadow: 0 0 0 3px rgba(49, 92, 69, 0.1);
+}
+.login-submit {
+  
+  display: block;
+  margin: 10px auto 0;
+
+  width: 180px;
+  height: 50px;
+  
+  border: none;
+  border-radius: 10px;
+
+  background-color: #005a2a;
+  color: white;
+
+  font-size: 0.95rem;
+  font-weight: 600;
+
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.login-submit:hover {
+  background-color: #759c88;
+  transform: translateY(-1px);
+  transform: translateY(-1px);
+}
+.signup-link {
+   margin-top: 20px;
+        text-align: center;
+        color: #dce9df;
+        font-size: 0.9rem;
+}
+
+.signup-link a {
+  color: #ffffff;
+        font-weight: 600;
+        text-decoration: underline;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+  color: #9cd5af;
+
+}
+    </style>
+  </head>
+  <body>
+  <div class="login-page">
+
+    <div class="login-image">
+      <div class="login-image-overlay">
+        <span class="login-image-label">✦ YOUR JOURNEY, YOUR STORIES</span>
+
+        <h2 class="fw-bold">Every journey leaves a story behind.</h2>
+
+        <p>
+          Keep the places you visited, the moments you loved,
+          and the memories you never want to forget.
+        </p>
+      </div>
+      <!-- Footer copyright or subtle note -->
+            <div class="login-copyright">
+                © 2026 My Travel Journal. Explore the world.
+            </div>
+    </div>
+
+    <div class="login-form-section">
+      <div class="login-form-container">
+
+        <div class="login-brand">✦ My Travel Journal</div>
+
+        <h1>Welcome back.</h1>
+
+        <p class="login-description">
+          Log in to continue your journey and revisit your saved memories.
+        </p>
+
+        <form>
+          <div class="form-group mb-3">
+            <label for="email">Email Address</label>
+            <input
+              id="email"
+              class="form-control"
+              type="email"
+              name="email"
+              placeholder="name@example.com"
+            />
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="password">Password</label>
+            <input
+              id="password"
+              class="form-control"
+              type="password"
+              name="password"
+              placeholder="Enter your password"
+            />
+          </div>
+
+          <button id="button" class="login-submit" type="submit">
+            Sign In →
+          </button>
+        </form>
+
+        <p class="signup-link">
+          Don't have an account?
+          <a href="/signup">Sign Up</a>
+        </p>
+
+      </div>
+    </div>
+
+  </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      async function postdata(url = "", data = {}) {
+        const response = await fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
+        return response.json();
+      }
+
+      let sub = document.getElementById("button");
+
+      sub.addEventListener("click", async (event) => {
+        event.preventDefault();
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+
+        let resp = await postdata("/login", { email, password });
+
+        console.log(resp);
+
+        if (resp.success) {
+          alert("Logged In Successfully !!!");
+          document.getElementById("email").value = "";
+          document.getElementById("password").value = "";
+          window.location.href = "/";
+        } else {
+          alert(resp.message);
+        }
+      });
+    </script>
+  </body>
+</html>
