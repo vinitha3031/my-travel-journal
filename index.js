@@ -25,7 +25,8 @@ app.use(passport.session());
 app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
-mongoose.connect('mongodb://localhost/express')
+
+mongoose.connect(process.env.MONGO_URI)
 .then(()=>console.log('DB connected'))
 .catch((error)=>console.log(`Error:${error}`))
 
