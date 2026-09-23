@@ -596,7 +596,7 @@
     font-size: 1.5rem;
   }
   .memory-card label {
-  font-size: 0.85rem;
+  font-size: 0.90rem;
 }
 
 .memory-card .form-control {
@@ -604,7 +604,7 @@
 }
 
 .memory-card .form-control::placeholder {
-  font-size: 0.8rem;
+  font-size: 0.90rem;
 }
 }
 
