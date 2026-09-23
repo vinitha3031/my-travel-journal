@@ -539,8 +539,130 @@
           margin: 15px 0;
         }
       }
-    
-    
-    
-    
-  
+
+      @media (max-width: 767.98px) {
+
+  /* Add Travel section */
+  .add-travel-section {
+    padding-top: 30px !important;
+    padding-bottom: 40px !important;
+  }
+
+  /* Featured image */
+  .featured-memory {
+    min-height: 360px;
+    border-radius: 18px;
+  }
+
+  .featured-memory img {
+    height: 360px;
+  }
+
+  /* Text over image */
+  .featured-overlay {
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+  }
+
+  .featured-label {
+    font-size: 0.65rem;
+    padding: 6px 10px;
+    margin-bottom: 8px;
+  }
+
+  .featured-overlay h1 {
+    font-size: 1.8rem;
+    line-height: 1.15;
+  }
+
+  .featured-overlay p:last-child {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+
+  /* Form */
+  .memory-form {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .memory-card {
+    border-radius: 18px;
+    padding: 1.25rem !important;
+  }
+
+  .memory-card h3 {
+    font-size: 1.5rem;
+  }
+  .memory-card label {
+  font-size: 0.85rem;
+}
+
+.memory-card .form-control {
+  font-size: 0.85rem;
+}
+
+.memory-card .form-control::placeholder {
+  font-size: 0.8rem;
+}
+}
+
+@media (max-width: 767.98px) {
+  #tlist > .row {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    margin: 0;
+  }
+
+  #tlist > .row > [class*="col-"] {
+    width: auto;
+    padding: 0;
+  }
+
+  .travel-card {
+    height: 100%;
+    border-radius: 18px;
+  }
+
+  .travel-card-image {
+    height: 130px;
+  }
+
+  .travel-city {
+    left: 12px;
+    bottom: 12px;
+    font-size: 1rem;
+  }
+
+  .travel-city i {
+    font-size: 0.85rem;
+    margin-right: 3px;
+  }
+
+  .travel-category {
+    top: 10px;
+    left: 10px;
+    padding: 5px 9px;
+    font-size: 0.65rem;
+  }
+
+  .travel-card .card-body {
+    padding: 12px !important;
+  }
+
+  .travel-card-footer {
+    padding-top: 10px;
+  }
+
+  .travel-card-footer .btn {
+    margin-right: 4px;
+    padding: 4px 9px;
+    font-size: 0.75rem;
+  }
+}
+.travel-description {
+  font-size: 0.75rem;
+  line-height: 1.45;
+}
