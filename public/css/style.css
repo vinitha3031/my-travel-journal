@@ -567,6 +567,15 @@
 
 @media (max-width: 767.98px) {
 
+
+
+  .featured-memory {
+    min-height: 360px;
+}
+
+.featured-memory img {
+    height: 360px;
+}
   /* Text over image */
   .featured-overlay {
     left: 20px;
