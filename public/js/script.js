@@ -23,6 +23,11 @@ const heroImages = [
 
 const heroImage = document.getElementById("hero-image");
 
+// Preload images
+heroImages.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+});
 
 let currentImage = 0;
 
@@ -37,11 +42,10 @@ setInterval(() => {
         }
 
         heroImage.src = heroImages[currentImage];
-
         heroImage.style.opacity = "1";
     }, 1500);
 
-}, 7000);
+}, 6000);
 
 
 let travelcard = document.getElementById("tlist");
