@@ -10,6 +10,40 @@ async function postdata(url = "", data = {}) {
   return response.json();
 }
 
+const heroImages = [
+  "/forest.jpg",
+  "/land-img2.png",
+  "/Taj-Mahal.jpg",
+  "/beach.jpg",  
+    "/road.jpg",
+    "/street.jpg",
+    "/mountain.jpg",
+    "/hero-img3.jpg"
+];
+
+const heroImage = document.getElementById("hero-image");
+
+
+let currentImage = 0;
+
+setInterval(() => {
+    heroImage.style.opacity = "0";
+
+    setTimeout(() => {
+        currentImage++;
+
+        if (currentImage >= heroImages.length) {
+            currentImage = 0;
+        }
+
+        heroImage.src = heroImages[currentImage];
+
+        heroImage.style.opacity = "1";
+    }, 1500);
+
+}, 7000);
+
+
 let travelcard = document.getElementById("tlist");
 let travelsdata = [];
 

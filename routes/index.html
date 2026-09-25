@@ -20,7 +20,7 @@
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
   </head>
   <body>
     <nav class="navbar navbar-expand-lg travel-navbar">
@@ -93,7 +93,7 @@
 
               <ul class="dropdown-menu dropdown-menu-end profile-menu">
                 <li>
-                  <a class="dropdown-item" href="#memory"> My Journal </a>
+                  <a class="dropdown-item" href="#memories"> My Journal </a>
                 </li>
 
                 <li>
@@ -126,6 +126,7 @@
           <div class="col-md-6 memory-image">
             <div class="featured-memory">
               <img
+                id="hero-image"
                 src="/hero-img3.jpg"
                 class="img-fluid"
                 alt="Travel landscape"
@@ -217,16 +218,16 @@
           No Memories Saved
         </span>
         <button
-  id="showAllBtn"
-  class="show-all-btn d-none"
-  title="Show all memories"
->
-  <i class="bi bi-arrow-clockwise"></i>
-</button>
+          id="showAllBtn"
+          class="show-all-btn d-none"
+          title="Show all memories"
+        >
+          <i class="bi bi-arrow-clockwise"></i>
+        </button>
       </div>
       <div class="container" id="tlist"></div>
 
-      <!--edit travel list-->
+      <!--edit travel-->
       <div class="modal fade" id="editTravel" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered">
           <div class="modal-content"></div>
