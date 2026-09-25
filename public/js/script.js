@@ -42,11 +42,14 @@ setInterval(() => {
             currentImage = 0;
         }
 
-        heroImage.src = heroImages[currentImage];
-        heroImage.style.opacity = "1";
+        heroImage.onload = () => {
+    heroImage.style.opacity = "1";
+};
+
+heroImage.src = heroImages[currentImage];
     }, 1500);
 
-}, 6000);
+}, 7000);
 
 
 let travelcard = document.getElementById("tlist");
