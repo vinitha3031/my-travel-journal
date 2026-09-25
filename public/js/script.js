@@ -11,6 +11,7 @@ async function postdata(url = "", data = {}) {
 }
 
 const heroImages = [
+  "/hero-img3.jpg",
   "/forest.jpg",
   "/land-img2.png",
   "/Taj-Mahal.jpg",
@@ -18,7 +19,7 @@ const heroImages = [
     "/road.jpg",
     "/street.jpg",
     "/mountain.jpg",
-    "/hero-img3.jpg"
+    
 ];
 
 const heroImage = document.getElementById("hero-image");
