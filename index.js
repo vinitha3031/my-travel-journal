@@ -26,9 +26,17 @@ app.use(express.json())
 app.use(express.urlencoded({extended:true}))
 
 
-mongoose.connect(process.env.MONGO_URI)
-.then(()=>console.log('DB connected'))
-.catch((error)=>console.log(`Error:${error}`))
+const connectDB = async () => {
+    try {
+        await mongoose.connect(process.env.MONGO_URI);
+        console.log("DB connected");
+    }
+    catch (error) {
+        console.log(`Error: ${error}`);
+    }
+};
+
+await connectDB();
 
 const __filename=fileURLToPath(import.meta.url)
 const __dirname=path.dirname(__filename)
