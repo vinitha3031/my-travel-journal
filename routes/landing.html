@@ -1,0 +1,471 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>My Travel Journal</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/landing-hero.css" />
+    <link rel="stylesheet" href="/css/landing-explore.css" />
+    <link rel="stylesheet" href="/css/landing-about.css" />
+    <link rel="stylesheet" href="/css/landing-cta.css" />
+    <link rel="stylesheet" href="/css/landing-footer.css" />
+    <link rel="stylesheet" href="/css/landing-animation.css" />
+  </head>
+
+  <body>
+    <main class="landing-page">
+      <!---HERO SECTION -->
+
+      <section class="landing-hero">
+        <!-- NAVBAR -->
+
+        <nav class="landing-navbar">
+          <div class="landing-nav-inner">
+            <!-- BRAND -->
+
+            <a href="/" class="landing-brand">
+              <img
+                src="/images/logo-camera-all-white.png"
+                alt="My Travel Journal"
+                class="landing-brand-logo"
+              />
+            </a>
+
+            <!-- NAVIGATION -->
+
+            <div class="landing-nav-links">
+              <a href="#explore"> Explore </a>
+
+              <a href="#about"> About </a>
+
+              <!-- GUEST STATE -->
+
+              <div class="landing-guest-actions">
+                <a href="/login" class="landing-login-link"> Log In </a>
+
+                <a href="/signup" class="landing-nav-btn">
+                  Start Your Journal
+                </a>
+              </div>
+
+              <!-- LOGGED-IN STATE -->
+
+              <div class="landing-user-actions">
+                <a href="/journal" class="landing-journal-link"> My Journal </a>
+
+                <div class="landing-profile">
+                  <button type="button" class="landing-profile-btn">
+                    <span class="landing-profile-avatar"></span>
+
+                    <span class="landing-profile-name"></span>
+
+                    <i class="bi bi-chevron-down"></i>
+                  </button>
+
+                  <div class="landing-profile-menu">
+                    <a href="/journal"> My Journal </a>
+
+                    <a id="landing-logout" href="/logout"> Logout </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              type="button"
+              class="landing-menu-toggle"
+              aria-label="Open navigation menu"
+              aria-expanded="false"
+            >
+              <i class="bi bi-list"></i>
+            </button>
+          </div>
+        </nav>
+
+        <!-- HERO CONTENT -->
+
+        <div class="hero-content">
+          <p class="hero-label">YOUR JOURNEY, YOUR STORIES</p>
+
+          <h1>
+            Where places<br />
+            become memories.
+          </h1>
+
+          <p class="hero-description">
+            Discover places through the memories of people who have been there.
+          </p>
+        </div>
+
+        <!-- MEMORY CARDS -->
+
+        <div class="hero-memories">
+          <div class="hero-memories-track">
+            <!-- MEMORY 1 -->
+            <article class="memory-card">
+              <img src="/images/Bali.jpg" alt="Travel memory from Bali" />
+
+              <div class="memory-card-info">
+                <span>Bali</span>
+                <small>Tropical Escape</small>
+              </div>
+            </article>
+
+            <!-- MEMORY 2 -->
+            <article class="memory-card active">
+              <img src="/images/effiel-tower.jpg" alt="Travel memory from Paris" />
+
+              <div class="memory-card-info">
+                <span>Paris</span>
+                <small>Eiffel Tower</small>
+              </div>
+            </article>
+
+            <!-- MEMORY 3 -->
+            <article class="memory-card">
+              <img src="/images/seoul.jpg" alt="Travel memory from Seoul" />
+
+              <div class="memory-card-info">
+                <span>Seoul</span>
+                <small>City Explore</small>
+              </div>
+            </article>
+            <!-- MEMORY 4 -->
+            <article class="memory-card">
+              <img src="/images/Iceland.jpg" alt="Travel memory from Seoul" />
+
+              <div class="memory-card-info">
+                <span>Iceland</span>
+                <small>Northern Lights</small>
+              </div>
+            </article>
+            <!-- MEMORY 5 -->
+            <article class="memory-card">
+              <img src="/images/greece.jpg" alt="Travel memory from Seoul" />
+
+              <div class="memory-card-info">
+                <span>Santorini</span>
+                <small>Island Escape</small>
+              </div>
+            </article>
+            <article class="memory-card memory-add-card">
+              <div class="memory-add-icon">
+                <i class="bi bi-plus-lg"></i>
+              </div>
+
+              <h3>Click to add a Memory</h3>
+
+              <p>Keep your next journey here.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- EXPLORE SECTION -->
+
+      <section id="explore" class="landing-explore">
+        <div class="container">
+          <div class="explore-heading">
+            <p class="section-label">EXPLORE THROUGH EXPERIENCES</p>
+
+            <h2>See places through real memories.</h2>
+
+            <p>
+              Discover destinations through the moments, places and stories
+              travelers choose to remember.
+            </p>
+          </div>
+
+          <div class="explore-memories">
+            <article class="explore-memory-card">
+              <div class="explore-memory-image">
+                <img src="/images/Turkey.jpg" alt="Travel memory" />
+              </div>
+
+              <div class="explore-memory-content">
+                <h3>A morning above Cappadocia</h3>
+                <p>Cappadocia, Turkey</p>
+
+                <div class="explore-memory-meta">
+                  <button
+                    type="button"
+                    class="memory-like-btn"
+                    aria-label="Like this memory"
+                  >
+                    <i class="bi bi-heart"></i>
+                    <span class="memory-like-count">12</span>
+                  </button>
+
+                  <span>Shared memory</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="explore-memory-card">
+              <div class="explore-memory-image">
+                <img src="/images/Switz.jpg" alt="Travel memory" />
+              </div>
+
+              <div class="explore-memory-content">
+                <h3>A quiet mountain escape</h3>
+                <p>Swiss Alps, Switzerland</p>
+
+                <div class="explore-memory-meta">
+                  <button
+                    type="button"
+                    class="memory-like-btn"
+                    aria-label="Like this memory"
+                  >
+                    <i class="bi bi-heart"></i>
+                    <span class="memory-like-count">8</span>
+                  </button>
+
+                  <span>Shared memory</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="explore-memory-card">
+              <div class="explore-memory-image">
+                <img src="/images/Italy.jpg" alt="Travel memory" />
+              </div>
+
+              <div class="explore-memory-content">
+                <h3>Lost along the canals</h3>
+                <p>Venice, Italy</p>
+
+                <div class="explore-memory-meta">
+                  <button
+                    type="button"
+                    class="memory-like-btn"
+                    aria-label="Like this memory"
+                  >
+                    <i class="bi bi-heart"></i>
+                    <span class="memory-like-count">15</span>
+                  </button>
+
+                  <span>Shared memory</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!--  ABOUT SECTION  -->
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="landing-about">
+        <div class="container">
+          <!-- ABOUT MAIN -->
+          <div class="about-main">
+            <!-- LEFT: ABOUT MAP -->
+            <div class="about-map" id="aboutMap">
+              <svg
+                class="about-map-lines"
+                id="aboutMapLines"
+                aria-hidden="true"
+              ></svg>
+
+              <!-- CARD 1 -->
+              <article class="about-map-card about-map-card-1">
+                <div class="about-map-icon">
+                  <i class="bi bi-airplane"></i>
+                </div>
+
+                <h3>Take the Journey</h3>
+
+                <p>Travel somewhere, explore, and make new experiences.</p>
+              </article>
+
+              <!-- CARD 2 -->
+              <article class="about-map-card about-map-card-2">
+                <div class="about-map-icon">
+                  <i class="bi bi-camera"></i>
+                </div>
+
+                <h3>Make a Memory</h3>
+
+                <p>Capture the moments and experiences that matter to you.</p>
+              </article>
+
+              <!-- CARD 3 -->
+              <article class="about-map-card about-map-card-3">
+                <div class="about-map-icon">
+                  <i class="bi bi-journal-plus"></i>
+                </div>
+
+                <h3>Add It</h3>
+
+                <p>
+                  Add your journey and the memory behind it to your journal.
+                </p>
+              </article>
+
+              <!-- CARD 4 -->
+              <article class="about-map-card about-map-card-4">
+                <div class="about-map-icon">
+                  <i class="bi bi-bookmark-heart"></i>
+                </div>
+
+                <h3>Keep the Memory</h3>
+
+                <p>Revisit your journeys and memories whenever you want.</p>
+              </article>
+            </div>
+            <!-- RIGHT: ABOUT CONTENT -->
+            <div class="about-content">
+              <p class="section-label">ABOUT MY TRAVEL JOURNAL</p>
+
+              <h2>A place to <br />remember where you've been.</h2>
+
+              <p class="about-description">
+                My Travel Journal is a personal space for keeping the places,
+                stories and memories behind your journeys.
+              </p>
+            </div>
+          </div>
+          <div class="about-how-divider" aria-hidden="true">
+            <span class="about-divider-line about-divider-left"></span>
+            <span class="about-divider-line about-divider-right"></span>
+          </div>
+
+          <!-- HOW IT WORKS -->
+          <div class="about-how">
+            <div class="about-how-heading">
+              <p class="section-label">HOW IT WORKS</p>
+
+              <h2>Your journey, kept simply.</h2>
+            </div>
+
+            <div class="about-steps">
+              <article class="about-step">
+                <span class="about-step-number"> 01 </span>
+
+                <h3>Create your account</h3>
+
+                <p>Start your personal travel journal.</p>
+              </article>
+
+              <article class="about-step">
+                <span class="about-step-number"> 02 </span>
+
+                <h3>Add your journey</h3>
+
+                <p>Save a place and the memories behind it.</p>
+              </article>
+
+              <article class="about-step">
+                <span class="about-step-number"> 03 </span>
+
+                <h3>Keep your memories</h3>
+
+                <p>Return to your journeys whenever you want.</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FINAL CTA -->
+      <section class="landing-cta">
+        <!-- DECORATIVE MEMORY IMAGES -->
+        <div class="cta-memory cta-memory-1">
+          <img src="/images/Bali.jpg" alt="" />
+        </div>
+
+        <div class="cta-memory cta-memory-2">
+          <img src="/images/seoul.jpg" alt="" />
+        </div>
+
+        <div class="cta-memory cta-memory-3">
+          <img src="/images/effiel-tower.jpg" alt="" />
+        </div>
+
+        <!-- SUBTLE TRAVEL PATH -->
+        <svg class="cta-path" viewBox="0 0 1200 500" aria-hidden="true">
+          <path d="M120 390 C300 120, 520 110, 720 280 S1000 420, 1120 150" />
+        </svg>
+        <!-- MOBILE TRAVEL PATH -->
+        <svg class="cta-path-mobile" viewBox="0 0 390 620" aria-hidden="true">
+          <path
+            d="M28 145 C85 75, 145 90, 190 160 S320 245, 350 175 S335 450, 265 510"
+          />
+        </svg>
+
+        <!-- CTA CONTENT -->
+        <div class="container">
+          <div class="cta-content">
+            <p class="section-label">KEEP YOUR JOURNEY</p>
+
+            <h2>Your next memory starts here.</h2>
+
+            <p class="cta-description">
+              Create a place for the journeys you'll always want to remember.
+            </p>
+
+            <a href="/journal" class="hero-btn"> Start Your Journal </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="landing-footer">
+      <div class="container">
+        <div class="footer-main">
+          <!-- BRAND -->
+          <div class="footer-brand">
+            <a href="/" class="footer-brand-link">
+              <img
+                src="/images/logo-camera-all-white.png"
+                alt="My Travel Journal"
+                class="footer-brand-logo"
+              />
+            </a>
+
+            <p>Where places become memories.</p>
+          </div>
+
+          <!-- LINKS -->
+          <div class="footer-links">
+            <div class="footer-link-group">
+              <h3>Explore</h3>
+
+              <a href="#explore">Explore</a>
+              <a href="#about">About</a>
+            </div>
+
+            <div class="footer-link-group">
+              <h3>Journal</h3>
+
+              <a href="/login">Log In</a>
+              <a href="/signup">Start Your Journal</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- BOTTOM -->
+        <div class="footer-bottom">
+          <p>© 2026 My Travel Journal</p>
+
+          <p>Your journeys. Your stories. Your memories.</p>
+        </div>
+      </div>
+    </footer>
+    <script src="/js/landing.js"></script>
+    <script src="/js/landing-animation.js"></script>
+  </body>
+</html>

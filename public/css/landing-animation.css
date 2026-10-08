@@ -1,0 +1,179 @@
+/* LANDING PAGE ANIMATIONS*/
+
+
+/*  COMMON*/
+
+.reveal-up,
+.reveal-left,
+.reveal-right,
+.reveal-scale {
+  opacity: 0;
+
+  transition:
+    opacity 0.75s ease,
+    transform 0.75s ease;
+}
+
+.reveal-up {
+  transform: translateY(30px);
+}
+
+.reveal-left {
+  transform: translateX(-40px);
+}
+
+.reveal-right {
+  transform: translateX(40px);
+}
+
+.reveal-scale {
+  transform: scale(0.94);
+}
+
+.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+
+/*  EXPLORE CARDS*/
+
+.explore-memory-card.reveal-up {
+  transform: translateY(35px);
+}
+
+
+/*  HOW IT WORKS*/
+
+.about-step.reveal-up {
+  transform: translateY(25px);
+}
+
+
+/*  CTA MEMORY PHOTOS*/
+
+/* Photo 1 enters from right */
+
+.cta-memory-1.reveal-cta {
+  opacity: 0;
+
+  transform:
+    translateX(85px)
+    rotate(-7deg);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.cta-memory-1.reveal-cta.is-visible {
+  opacity: 0.82;
+
+  transform:
+    translateX(0)
+    rotate(-7deg);
+}
+
+
+/* Photo 2 enters from right */
+
+.cta-memory-2.reveal-cta {
+  opacity: 0;
+
+  transform:
+    translateX(100px)
+    rotate(7deg);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.cta-memory-2.reveal-cta.is-visible {
+  opacity: 0.82;
+
+  transform:
+    translateX(0)
+    rotate(7deg);
+}
+
+
+/* Photo 3 enters from right */
+
+.cta-memory-3.reveal-cta {
+  opacity: 0;
+
+  transform:
+    translateX(80px)
+    rotate(-5deg);
+
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.cta-memory-3.reveal-cta.is-visible {
+  opacity: 0.82;
+
+  transform:
+    translateX(0)
+    rotate(-5deg);
+}
+
+
+/*  CTA TRAVEL PATH*/
+
+.cta-path path,
+.cta-path-mobile path {
+  stroke-dashoffset: 0;
+}
+
+
+/*  REDUCED MOTION*/
+
+@media (prefers-reduced-motion: reduce) {
+
+  .reveal-up,
+  .reveal-left,
+  .reveal-right,
+  .reveal-scale,
+  .cta-memory-1.reveal-cta,
+  .cta-memory-2.reveal-cta,
+  .cta-memory-3.reveal-cta {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
+.cta-memory-1.reveal-cta {
+  opacity: 0;
+  transform: translateX(85px) rotate(-7deg);
+}
+
+.cta-memory-1.reveal-cta.is-visible {
+  opacity: 0.82;
+  transform: translateX(0) rotate(-7deg);
+}
+
+
+.cta-memory-2.reveal-cta {
+  opacity: 0;
+  transform: translateX(100px) rotate(7deg);
+}
+
+.cta-memory-2.reveal-cta.is-visible {
+  opacity: 0.82;
+  transform: translateX(0) rotate(7deg);
+}
+
+
+.cta-memory-3.reveal-cta {
+  opacity: 0;
+  transform: translateX(80px) rotate(-5deg);
+}
+
+.cta-memory-3.reveal-cta.is-visible {
+  opacity: 0.82;
+  transform: translateX(0) rotate(-5deg);
+}

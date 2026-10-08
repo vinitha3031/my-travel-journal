@@ -1,0 +1,528 @@
+/* ABOUT SECTION*/
+
+.landing-about {
+  padding: 125px 0 135px;
+  background: #f3efe8;
+}
+
+.about-main {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: 5px;
+}
+
+.about-map {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  height: 620px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.about-map-lines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: visible;
+  pointer-events: none;
+}
+
+.about-map-lines .map-link {
+  fill: none;
+  stroke: #5f8972;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 6 7;
+}
+
+/*  MAP CARDS*/
+
+.about-map-card {
+  position: absolute;
+  z-index: 2;
+
+  width: 165px;
+  min-height: 155px;
+
+  padding: 20px 14px 18px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  background: linear-gradient(145deg,
+      #fffdf8 0%,
+      #f7f5ed 52%,
+      #e9f0ea 100%);
+
+  border: 1px solid rgba(82, 117, 101, 0.20);
+  border-radius: 18px;
+
+  box-shadow:
+    0 3px 8px rgba(40, 50, 40, 0.05),
+    0 14px 30px -14px rgba(40, 50, 40, 0.20);
+
+  opacity: 0;
+  transform: translateY(18px);
+
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-map-card.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-map-card:hover {
+  box-shadow:
+    0 7px 14px rgba(40, 50, 40, 0.07),
+    0 18px 35px -14px rgba(40, 50, 40, 0.23);
+}
+
+
+/* CARD POSITIONS*/
+
+.about-map-card-1 {
+  left: 88px;
+  top: -50px;
+}
+
+.about-map-card-2 {
+  left: 50px;
+  top: 215px;
+}
+
+.about-map-card-3 {
+  left: 180px;
+  top: 430px;
+}
+
+.about-map-card-4 {
+  left: 425px;
+  top: 500px;
+}
+
+/* CARD ICON*/
+
+.about-map-icon {
+  width: 56px;
+  height: 56px;
+
+  display: grid;
+  place-items: center;
+
+  margin-bottom: 12px;
+
+  border-radius: 50%;
+
+  background: #dce9df;
+  color: #2f6849;
+}
+
+.about-map-icon i {
+  font-size: 1.45rem;
+}
+
+
+/* CARD TEXT*/
+
+.about-map-card h3 {
+  margin: 0 0 5px;
+
+  color: #315c45;
+
+  font-size: 0.92rem;
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.about-map-card p {
+  margin: 0;
+
+  color: #68756d;
+
+  font-size: 0.81rem;
+  line-height: 1.5;
+}
+
+
+/* ABOUT CONTENT*/
+
+.about-content {
+  position: relative;
+  left: -90px;
+  z-index: 5;
+
+  max-width: 560px;
+
+  transform: translateY(-35px);
+}
+
+.about-content .section-label {
+  margin-bottom: 24px;
+
+  color: #527565;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.about-content h2 {
+  margin: 0 0 24px;
+
+  color: #315c45;
+
+  font-family: "Kaushan Script", sans-serif;
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  line-height: 1.08;
+  font-weight: 400;
+}
+
+.about-description {
+  max-width: 500px;
+
+  margin: 0;
+
+  color: #68736c;
+
+  font-size: 1rem;
+  line-height: 1.85;
+}
+
+
+/*  ABOUT → HOW IT WORKS */
+
+.about-how-divider {
+  position: relative;
+
+  width: 100%;
+  height: 20px;
+
+  margin-top: 90px;
+  margin-bottom: 0;
+}
+
+.about-divider-line {
+  position: absolute;
+  top: 50%;
+
+  width: 34%;
+  height: 1.5px;
+
+  background: #5f8972;
+  opacity: 0.7;
+
+  transform: translateY(-50%);
+}
+
+.about-divider-left {
+  left: 0;
+}
+
+.about-divider-right {
+  right: 0;
+}
+
+
+/* END CIRCLES */
+
+.about-divider-left::before,
+.about-divider-right::before {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  border-radius: 50%;
+
+  background: #5f8972;
+
+  transform: translateY(-50%);
+}
+
+.about-divider-left::before {
+  left: -1px;
+}
+
+.about-divider-right::before {
+  right: -1px;
+}
+
+
+/* HOW IT WORKS */
+
+.about-how {
+  margin-top: 0;
+  padding-top: 50px;
+}
+
+.about-how-heading {
+  text-align: center;
+}
+
+.about-how-heading .section-label {
+  margin-bottom: 16px;
+
+  color: #527565;
+
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+.about-how-heading h2 {
+  margin: 0;
+
+  color: #315c45;
+
+  font-family: "Kaushan Script", sans-serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+  font-weight: 400;
+}
+
+
+/* HOW IT WORKS STEPS */
+
+.about-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 60px;
+}
+
+.about-step {
+  position: relative;
+
+  padding: 0 35px;
+
+  text-align: center;
+}
+
+.about-step:not(:last-child)::after {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  right: 0;
+
+  width: 50%;
+
+  border-top: 1px solid rgba(82, 117, 101, 0.28);
+}
+
+.about-step:not(:first-child)::before {
+  content: "";
+
+  position: absolute;
+  top: 26px;
+  left: 0;
+
+  width: 50%;
+
+  border-top: 1px solid rgba(82, 117, 101, 0.28);
+}
+
+.about-step-number {
+  position: relative;
+  z-index: 2;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 20px;
+
+  border: 1px solid #315c45;
+  border-radius: 50%;
+
+  background: #315c45;
+  color: #f7f4ed;
+
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.about-step h3 {
+  margin: 0 0 8px;
+
+  color: #1d3025;
+
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.about-step p {
+  max-width: 220px;
+
+  margin: 0 auto;
+
+  color: #7a847d;
+
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+
+/*TABLET*/
+
+@media (max-width: 991px) {
+
+  .about-main {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .about-map {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .about-content {
+    max-width: 650px;
+
+    left: 0;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+    transform: none;
+  }
+
+  .about-description {
+    margin: 0 auto;
+  }
+}
+
+
+/*MOBILE*/
+
+@media (max-width: 767px) {
+
+  .landing-about {
+    padding: 90px 0 100px;
+  }
+
+
+  /* =========================
+     ABOUT ORDER
+  ========================= */
+
+  .about-main {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  /* About text first */
+  .about-content {
+    order: 1;
+
+    left: 0;
+    margin: 0 auto;
+
+    text-align: center;
+    transform: none;
+  }
+
+  /* Mind map second */
+  .about-map {
+    order: 2;
+
+    width: 100%;
+    height: 680px;
+    max-width: 420px;
+
+    margin: 0 auto;
+  }
+
+
+  /*  ABOUT TEXT*/
+
+  .about-content h2 {
+    font-size: 2.8rem;
+  }
+
+  .about-description {
+    margin: 0 auto;
+  }
+
+  .about-map-card {
+    width: 155px;
+    min-height: 155px;
+  }
+
+  .about-map-card-1 {
+    top: 10px;
+    left: 50%;
+
+    transform: translate(-50%, 18px);
+  }
+
+  .about-map-card-1.is-visible {
+    transform: translate(-50%, 0);
+  }
+
+  .about-map-card-2 {
+    top: 175px;
+    left: 5%;
+  }
+
+  .about-map-card-3 {
+    top: 350px;
+    left: 30%;
+  }
+
+  .about-map-card-4 {
+    top: 505px;
+    right: 5%;
+    left: auto;
+  }
+
+  .about-map-lines {
+    display: none;
+  }
+
+  .about-how-divider {
+    margin-top: 40px;
+  }
+
+  .about-divider-line {
+    width: 28%;
+  }
+
+  .about-how {
+    padding-top: 30px;
+  }
+
+  .about-steps {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .about-step {
+    padding: 0;
+  }
+
+  .about-step::before,
+  .about-step::after {
+    display: none;
+  }
+}

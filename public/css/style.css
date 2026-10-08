@@ -92,6 +92,38 @@
   border: 0;
 }
 
+/* HOME NAV ITEM*/
+
+.home-link {
+  margin-right: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #315c45;
+  text-decoration: none;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  padding: 8px 10px;
+
+  border-radius: 8px;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.home-link i {
+  font-size: 1.09rem;
+}
+
+.home-link:hover {
+  color: #264b38;
+  background-color: rgba(49, 92, 69, 0.08);
+}
+
 /* My Journal */
 
 .journal-icon {
@@ -108,8 +140,8 @@
 }
 
 .journal-btn:hover {
-  color: #315c45;
-  background-color: #f2f6f2;
+  color: #264b38;
+  background-color: rgba(49, 92, 69, 0.08);
 }
 
 /* Profile */
@@ -124,7 +156,7 @@
 }
 
 .profile-link:hover {
-  background-color: #f2f6f2;
+  background-color: rgba(49, 92, 69, 0.08);
 }
 
 .profile-avatar {
@@ -187,18 +219,18 @@
 
 /* Featured image */
 .featured-memory {
-        position: relative;
-        overflow: hidden;
-        border-radius: 24px;
-        min-height: 520px;
-      }
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  min-height: 520px;
+}
 
 
 .featured-memory img {
-    width: 100%;
-    height: 520px;
-    object-fit: cover;
-    transition: opacity 1.5s ease-in-out;
+  width: 100%;
+  height: 520px;
+  object-fit: cover;
+  transition: opacity 1.5s ease-in-out;
 }
 
 .featured-memory::after {
@@ -509,12 +541,13 @@
   font-size: 0.78rem;
 }
 
-#editTravel h5{
-  font-family:"Kaushan Script", sans-serif;
+#editTravel h5 {
+  font-family: "Kaushan Script", sans-serif;
   color: #315c45;
   font-weight: 800;
 }
-#editTravel label{
+
+#editTravel label {
   color: #315c45;
 }
 
@@ -556,6 +589,8 @@
 }
 
 
+
+
 /* Mobile */
 
 @media (max-width: 991.98px) {
@@ -563,6 +598,7 @@
     width: 100%;
     margin: 15px 0;
   }
+
 }
 
 @media (max-width: 767.98px) {
@@ -571,17 +607,18 @@
 
   .featured-memory {
     min-height: 360px;
-}
+  }
 
-.featured-memory img {
+  .featured-memory img {
     height: 360px;
-}
+  }
+
   /* Text over image */
   .featured-overlay {
     left: 20px;
     right: 20px;
     bottom: 20px;
-    
+
   }
 
   .featured-label {
@@ -680,6 +717,115 @@
     margin-right: 4px;
     padding: 4px 9px;
     font-size: 0.75rem;
+  }
+
+  /* MOBILE NAVBAR */
+
+
+  .travel-navbar {
+    padding: 10px 0;
+  }
+
+  .travel-navbar .container {
+    position: relative;
+  }
+
+  .navbar-brand {
+    gap: 10px !important;
+  }
+
+  .brand-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1.1rem;
+    border-radius: 10px;
+  }
+
+  .brand-title {
+    font-size: 1.15rem;
+  }
+
+  .brand-subtitle {
+    font-size: 0.65rem;
+    margin-top: 3px;
+  }
+
+  /* Hamburger */
+
+  .travel-navbar .navbar-toggler {
+    border: 1px solid #315c45;
+    border-radius: 9px;
+
+    padding: 6px 9px;
+
+    box-shadow: none;
+  }
+
+  .travel-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 2px rgba(49, 92, 69, 0.15);
+  }
+
+  .travel-navbar .navbar-toggler-icon {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
+
+
+  /* Collapsed menu */
+
+  .travel-navbar .navbar-collapse {
+    margin-top: 12px;
+    padding: 12px 0 4px;
+  }
+
+  .travel-navbar .navbar-nav {
+    gap: 6px;
+  }
+
+  .travel-navbar .nav-item {
+    width: 100%;
+  }
+
+  .travel-navbar .home-link,
+  .travel-navbar .journal-btn,
+  .travel-navbar .profile-link {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+
+  /* Search */
+
+  .navbar-search {
+    width: 100%;
+    margin: 12px 0 14px;
+  }
+
+
+  /* Home */
+
+  .home-link {
+    padding: 10px 12px;
+  }
+
+
+  /* My Journal */
+
+  .journal-btn {
+    padding: 10px 12px;
+    text-align: left;
+  }
+
+
+  /* Profile */
+
+  .profile-link {
+    padding: 8px 12px !important;
+  }
+
+  .profile-menu {
+    width: 100%;
+    margin-top: 4px !important;
   }
 }
 

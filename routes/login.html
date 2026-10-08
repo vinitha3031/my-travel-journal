@@ -11,338 +11,82 @@
       crossorigin="anonymous"
     />
     <link
-  href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
-  rel="stylesheet"
-/>
-    <style>
-      .login-page {
-  min-height: 100vh;
-  display: flex;
-  position: relative;
-
-  background-image: url("/login-img.png");
-  background-size: cover;
-  background-position: center;
-  overflow: hidden;
-}
-.login-page::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 70, 55, 0.55);
-  z-index: 0;
-}
-
-.login-image {
-  width: 50%;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-
-  display: flex;
-  align-items: center; 
-
-}
-.login-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  
-}
-
-.login-image-overlay {
-  position: relative; 
-  width: 100%;        
-  padding: 0 55px;    
-  z-index: 2;
-  color: white;
-}
-
-.login-image-label {
-  display: inline-block;
-  color: #ffff;
-  font-size: 0.75rem;
-  font-weight:bolder;
-  letter-spacing: 1.5px;
-  margin-bottom: 50px;
-}
-
-.login-image-overlay h2 {
-  max-width: 520px;
-  margin-bottom: 20px;
-  font-family: "Kaushan Script", sans-serif;
-  font-size: 2.8rem;
-  line-height: 1.15;
-  color:  #ffff;
-}
-
-.login-image-overlay p {
-  max-width: 500px;
-  margin: 0;
-  color: #e3ebe5;
-  font-size: 0.95rem;
-  line-height: 1.7;
-}
-.login-copyright {
-  position: absolute;
-  left: 55px;
-  bottom: 35px;
-  color: #dce9df;
-  font-size: 0.75rem;
-}
-
-.login-form-section {
-  width: 50%;
-  min-height: 100vh;
- 
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.login-form-container {
-  width: 78%;
-  max-width: 560px;
-  padding: 45px 50px;
-
-  background: rgba(255, 255, 255, 0.20);
-  backdrop-filter: blur(18px);
-  -webkit-backdrop-filter: blur(18px);
-
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 28px;
-
-  box-shadow:
-    0 20px 50px rgba(35, 55, 42, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.45);
-}
-.login-brand {
-  color: #264b38;
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 45px;
-}
-
-.login-form-container h1 {
-  font-family: "Kaushan Script", sans-serif;
-  font-size: 2.8rem;
-  color: #26352c;
-  margin-bottom: 12px;
-  font-weight: bold;
-}
-
-.login-description {
-  color: #e3ebe5;
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 42px;
-}
-.login-form-container label {
-  display: block;
-  color: #050606;
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-
-.login-form-container .form-control {
-  height: 50px;
-  border: 1px solid #d9e1da;
-  border-radius: 10px;
-  background-color: #ffffff;
-  padding: 0 15px;
-  color: #35433a;
-}
-
-.login-form-container .form-control::placeholder {
-  color: #9aa59e;
-}
-
-.login-form-container .form-control:focus {
-  border-color: #315c45;
-  box-shadow: 0 0 0 3px rgba(49, 92, 69, 0.1);
-}
-.login-submit {
-  
-  display: block;
-  margin: 10px auto 0;
-
-  width: 180px;
-  height: 50px;
-  
-  border: none;
-  border-radius: 10px;
-
-  background-color: #005a2a;
-  color: white;
-
-  font-size: 0.95rem;
-  font-weight: 600;
-
-  transition: background-color 0.2s ease, transform 0.2s ease;
-}
-
-.login-submit:hover {
-  background-color: #759c88;
-  transform: translateY(-1px);
-  transform: translateY(-1px);
-}
-.signup-link {
-   margin-top: 20px;
-        text-align: center;
-        color: #dce9df;
-        font-size: 0.9rem;
-}
-
-.signup-link a {
-  color: #ffffff;
-        font-weight: 600;
-        text-decoration: underline;
-}
-
-.signup-link a:hover {
-  text-decoration: underline;
-  color: #9cd5af;
-
-}
-
-@media (max-width: 767.98px) {
-  .login-page {
-    min-height: 100vh;
-    display: block;
-  }
-
-  .login-image {
-    width: 100%;
-    min-height: 38vh;
-    align-items: center;
-  }
-
-  .login-image-overlay {
-    padding: 35px 25px;
-  }
-
-  .login-image-label {
-    margin-bottom: 20px;
-    font-size: 0.65rem;
-  }
-
-  .login-image-overlay h2 {
-    font-size: 2rem;
-    margin-bottom: 12px;
-  }
-
-  .login-image-overlay p {
-    font-size: 0.85rem;
-    line-height: 1.5;
-  }
-
-  .login-copyright {
-    display: none;
-  }
-
-  .login-form-section {
-    width: 100%;
-    min-height: 62vh;
-    padding: 30px 18px;
-  }
-
-  .login-form-container {
-    width: 100%;
-    max-width: 500px;
-    padding: 30px 22px;
-    border-radius: 20px;
-  }
-
-  .login-brand {
-    margin-bottom: 30px;
-    font-size: 1rem;
-  }
-
-  .login-form-container h1 {
-    font-size: 2.2rem;
-  }
-
-  .login-description {
-    font-size: 0.9rem;
-    margin-bottom: 30px;
-  }
-
-  .login-submit {
-    width: 160px;
-  }
-}
-    </style>
+      href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/login.css" />
   </head>
   <body>
-  <div class="login-page">
+    <div class="login-page">
+      <div class="login-image">
+        <div class="login-image-overlay">
+          <span class="login-image-label">✦ YOUR JOURNEY, YOUR STORIES</span>
 
-    <div class="login-image">
-      <div class="login-image-overlay">
-        <span class="login-image-label">✦ YOUR JOURNEY, YOUR STORIES</span>
+          <h2 class="fw-bold">Every journey leaves a story behind.</h2>
 
-        <h2 class="fw-bold">Every journey leaves a story behind.</h2>
-
-        <p>
-          Keep the places you visited, the moments you loved,
-          and the memories you never want to forget.
-        </p>
+          <p>
+            Keep the places you visited, the moments you loved, and the memories
+            you never want to forget.
+          </p>
+        </div>
+        <!-- Footer copyright or subtle note -->
+        <div class="login-copyright">
+          © 2026 My Travel Journal. Explore the world.
+        </div>
       </div>
-      <!-- Footer copyright or subtle note -->
-            <div class="login-copyright">
-                © 2026 My Travel Journal. Explore the world.
+
+      <div class="login-form-section">
+        <div class="login-form-container">
+          <div class="login-top-row">
+            <div class="login-brand">✦ My Travel Journal</div>
+
+            <a href="/" class="login-back-home">
+              <span class="back-arrow">←</span>
+              <span>Back to home</span>
+            </a>
+          </div>
+
+          <h1>Welcome back.</h1>
+
+          <p class="login-description">
+            Log in to continue your journey and revisit your saved memories.
+          </p>
+
+          <form>
+            <div class="form-group mb-3">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                class="form-control"
+                type="email"
+                name="email"
+                placeholder="name@example.com"
+              />
             </div>
-    </div>
 
-    <div class="login-form-section">
-      <div class="login-form-container">
+            <div class="form-group mb-3">
+              <label for="password">Password</label>
+              <input
+                id="password"
+                class="form-control"
+                type="password"
+                name="password"
+                placeholder="Enter your password"
+              />
+            </div>
 
-        <div class="login-brand">✦ My Travel Journal</div>
+            <button id="button" class="login-submit" type="submit">
+              Sign In →
+            </button>
+          </form>
 
-        <h1>Welcome back.</h1>
-
-        <p class="login-description">
-          Log in to continue your journey and revisit your saved memories.
-        </p>
-
-        <form>
-          <div class="form-group mb-3">
-            <label for="email">Email Address</label>
-            <input
-              id="email"
-              class="form-control"
-              type="email"
-              name="email"
-              placeholder="name@example.com"
-            />
-          </div>
-
-          <div class="form-group mb-3">
-            <label for="password">Password</label>
-            <input
-              id="password"
-              class="form-control"
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-            />
-          </div>
-
-          <button id="button" class="login-submit" type="submit">
-            Sign In →
-          </button>
-        </form>
-
-        <p class="signup-link">
-          Don't have an account?
-          <a href="/signup">Sign Up</a>
-        </p>
-
+          <p class="signup-link">
+            Don't have an account?
+            <a href="/signup">Sign Up</a>
+          </p>
+        </div>
       </div>
     </div>
-
-  </div>
 
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
@@ -376,7 +120,7 @@
           alert("Logged In Successfully !!!");
           document.getElementById("email").value = "";
           document.getElementById("password").value = "";
-          window.location.href = "/";
+          window.location.href = "/journal";
         } else {
           alert(resp.message);
         }

@@ -11,46 +11,43 @@ async function postdata(url = "", data = {}) {
 }
 
 const heroImages = [
-  "/hero-img3.jpg",
-  "/forest.jpg",
-  "/land-img2.png",
-  "/Taj-Mahal.jpg",
-  "/beach.jpg",  
-    "/road.jpg",
-    "/street.jpg",
-    "/mountain.jpg",
-    
+  "/images/hero-img3.jpg",
+  "/images/forest.jpg",
+  "/images/land-img2.png",
+  "/images/Taj-Mahal.jpg",
+  "/images/beach.jpg",
+  "/images/road.jpg",
+  "/images/street.jpg",
+  "/images/mountain.jpg",
 ];
 
 const heroImage = document.getElementById("hero-image");
 
 // Preload images
 heroImages.forEach((src) => {
-    const img = new Image();
-    img.src = src;
+  const img = new Image();
+  img.src = src;
 });
 
 let currentImage = 0;
 
 setInterval(() => {
-    heroImage.style.opacity = "0";
+  heroImage.style.opacity = "0";
 
-    setTimeout(() => {
-        currentImage++;
+  setTimeout(() => {
+    currentImage++;
 
-        if (currentImage >= heroImages.length) {
-            currentImage = 0;
-        }
+    if (currentImage >= heroImages.length) {
+      currentImage = 0;
+    }
 
-        heroImage.onload = () => {
-    heroImage.style.opacity = "1";
-};
+    heroImage.onload = () => {
+      heroImage.style.opacity = "1";
+    };
 
-heroImage.src = heroImages[currentImage];
-    }, 1500);
-
+    heroImage.src = heroImages[currentImage];
+  }, 1500);
 }, 7000);
-
 
 let travelcard = document.getElementById("tlist");
 let travelsdata = [];
@@ -200,7 +197,7 @@ function displayTravels(travels) {
 
               <div class="travel-card-image">
                 <img
-                  src="${element.image || "/no-img.png"}"
+                  src="${element.image || "/images/no-img.png"}"
                   alt="${element.city}"
                 >
 
@@ -364,7 +361,7 @@ searchform.addEventListener("submit", async (event) => {
   showAllBtn.addEventListener("click", () => {
     document.getElementById("search").value = "";
     fetchdata();
-     document.getElementById("showAllBtn").classList.add("d-none");
+    document.getElementById("showAllBtn").classList.add("d-none");
 
     document.getElementById("memories").scrollIntoView({
       behavior: "smooth",
