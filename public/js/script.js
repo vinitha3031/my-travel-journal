@@ -320,7 +320,7 @@ logout.addEventListener("click", async (event) => {
 
   if (a.success) {
     alert("Logout Successful");
-    window.location.href = "/login";
+    window.location.href = "/landing";
   }
 });
 
