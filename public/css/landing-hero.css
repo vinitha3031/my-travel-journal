@@ -774,6 +774,7 @@ body {
     background-size: auto 100%;
     background-position: center top;
   }
+
   .hero-content {
     width: 90%;
 
@@ -819,7 +820,8 @@ body {
 
   .hero-memories-track {
     gap: 6px;
-    padding: 0 10px 0 4px;
+    padding: 0;
+    will-change: transform;
   }
 
   .memory-card {
@@ -835,152 +837,157 @@ body {
     box-shadow:
       0 8px 20px rgba(0, 0, 0, 0.24),
       0 0 0 1px rgba(86, 117, 96, 0.20);
-  }
+    transition:
+      transform 0.45s ease,
+      opacity 0.45s ease,
+      box-shadow 0.45s ease,
+      border-radius 0.45s ease;
+}
 
-  .memory-card.active {
-    width: 135px;
-    height: 205px;
-    flex-basis: 135px;
+.memory-card.active {
+  width: 135px;
+  height: 205px;
+  flex-basis: 135px;
 
-    border-radius: 35px;
-    opacity: 1;
+  border-radius: 35px;
+  opacity: 1;
 
-    border: 1.5px solid rgba(255, 250, 240, 0.92);
+  border: 1.5px solid rgba(255, 250, 240, 0.92);
 
-    box-shadow:
-      0 14px 30px rgba(0, 0, 0, 0.30),
-      0 0 0 1.5px rgba(86, 117, 96, 0.20);
-  }
+  box-shadow:
+    0 14px 30px rgba(0, 0, 0, 0.30),
+    0 0 0 1.5px rgba(86, 117, 96, 0.20);
+}
 
-  .memory-add-card {
-    width: 105px;
-    height: 170px;
-    flex-basis: 105px;
-    opacity: 1;
+.memory-add-card {
+  width: 105px;
+  height: 170px;
+  flex-basis: 105px;
+  opacity: 1;
 
-    border-radius: 15px;
-  }
+  border-radius: 15px;
+}
 
-  .memory-add-icon {
-    width: 48px;
-    height: 48px;
-  }
+.memory-add-icon {
+  width: 48px;
+  height: 48px;
+}
 
-  .memory-add-icon i {
-    font-size: 1.25rem;
-  }
+.memory-add-icon i {
+  font-size: 1.25rem;
+}
 
-  .memory-add-card h3 {
-    font-size: 0.78rem;
-  }
+.memory-add-card h3 {
+  font-size: 0.78rem;
+}
 
-  .memory-add-card p {
-    font-size: 0.6rem;
-  }
+.memory-add-card p {
+  font-size: 0.6rem;
+}
 
-  .memory-card-info {
-    left: 11px;
-    right: 11px;
-    bottom: 11px;
-  }
+.memory-card-info {
+  left: 11px;
+  right: 11px;
+  bottom: 11px;
+}
 
-  .memory-card-info span {
-    font-size: 0.8rem;
-  }
+.memory-card-info span {
+  font-size: 0.8rem;
+}
 
-  .memory-card-info small {
-    font-size: 0.62rem;
-  }
-
-
-  /*ARROWS*/
-
-  .memory-next,
-  .memory-prev {
-    padding: 0;
-  }
-
-  .memory-next i,
-  .memory-prev i {
-    font-size: 2.1rem;
-  }
+.memory-card-info small {
+  font-size: 0.62rem;
+}
 
 
-  /* MOBILE NAVBAR*/
+/*ARROWS*/
 
-  .landing-navbar {
-    padding: 8px 5%;
-  }
+.memory-next,
+.memory-prev {
+  padding: 0;
+}
 
-  .landing-brand-logo {
-    width: 125px;
-  }
+.memory-next i,
+.memory-prev i {
+  font-size: 2.1rem;
+}
 
-  .landing-menu-toggle {
-    display: block;
-  }
 
-  .landing-nav-links {
-    position: absolute;
+/* MOBILE NAVBAR*/
 
-    top: 100%;
-    left: 5%;
-    right: 5%;
+.landing-navbar {
+  padding: 8px 5%;
+}
 
-    display: none;
+.landing-brand-logo {
+  width: 125px;
+}
 
-    flex-direction: column;
-    align-items: stretch;
+.landing-menu-toggle {
+  display: block;
+}
 
-    gap: 0;
+.landing-nav-links {
+  position: absolute;
 
-    padding: 14px;
+  top: 100%;
+  left: 5%;
+  right: 5%;
 
-    background: rgba(25, 48, 37, 0.92);
+  display: none;
 
-    border: 1px solid rgba(255, 255, 255, 0.14);
+  flex-direction: column;
+  align-items: stretch;
 
-    border-radius: 14px;
+  gap: 0;
 
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
+  padding: 14px;
 
-    box-shadow:
-      0 12px 30px rgba(0, 0, 0, 0.18);
-  }
+  background: rgba(25, 48, 37, 0.92);
 
-  .landing-nav-links.menu-open {
-    display: flex;
-  }
+  border: 1px solid rgba(255, 255, 255, 0.14);
 
-  .landing-nav-links>a,
-  .landing-login-link {
-    display: block;
+  border-radius: 14px;
 
-    width: 100%;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-    padding: 11px 10px;
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.18);
+}
 
-    font-size: 0.85rem;
-  }
+.landing-nav-links.menu-open {
+  display: flex;
+}
 
-  .landing-guest-actions {
-    width: 100%;
+.landing-nav-links>a,
+.landing-login-link {
+  display: block;
 
-    flex-direction: column;
-    align-items: stretch;
+  width: 100%;
 
-    gap: 4px;
-  }
+  padding: 11px 10px;
 
-  .landing-nav-btn {
-    width: 100%;
-    margin-top: 4px;
-  }
+  font-size: 0.85rem;
+}
 
-  .landing-user-actions {
-    width: 100%;
-  }
+.landing-guest-actions {
+  width: 100%;
+
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: 4px;
+}
+
+.landing-nav-btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+.landing-user-actions {
+  width: 100%;
+}
 }
 
 

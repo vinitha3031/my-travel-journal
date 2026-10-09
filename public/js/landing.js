@@ -446,7 +446,7 @@ document.addEventListener("DOMContentLoaded", () => {
         track.style.transition = "none";
       }
 
-      track.style.transform = `translateX(${offset}px)`;
+      track.style.transform = `translate3d(${offset}px, 0, 0)`;
 
       if (!animate) {
         requestAnimationFrame(() => {

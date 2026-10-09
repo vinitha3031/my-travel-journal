@@ -192,8 +192,6 @@ document.addEventListener("DOMContentLoaded", () => {
       document.querySelector(".footer-brand"),
 
       ...document.querySelectorAll(".footer-link-group"),
-
-      document.querySelector(".footer-bottom"),
     ].filter(Boolean),
     "reveal-up",
     140,
