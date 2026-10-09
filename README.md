@@ -181,7 +181,7 @@ http://localhost:3000
 
 ### Sign Up Page
 
-![Sign Up Page](public/Screenshots/SignUp.png)
+![Sign Up Page](public/Screenshots/Sign Up.png)
 
 ### Journal Page
 
